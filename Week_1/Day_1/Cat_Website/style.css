@@ -1,0 +1,53 @@
+ th, tr {
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid;
+}
+table
+{
+width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+}
+
+.surligne
+{
+	background-color: yellow;
+}
+.decale
+{
+	margin-left: 10%;
+}
+.toto 
+{
+	border: 1px solid red;
+	border-collapse: separate;
+	margin-left: 5%;
+	margin-right: 5%;
+	color: red;
+	text-align: center;
+}
+
+.lion
+{
+	border: 5px solid orange;
+	width: 350px;
+	height: 200px;
+margin-left: 100px;	
+}
+
+footer{
+	text-align: center;
+}
+.media
+{
+	text-align: center;
+}
+.cat
+{
+margin-left: 100px;
+width: 350px;
+height: 200px;
+border: 5px solid orange;
+
+
