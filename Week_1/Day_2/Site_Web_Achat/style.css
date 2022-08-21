@@ -33,16 +33,3 @@
   color: white;
   text-align: center;
 }
-.fille{
-    background-size: cover;
-    width: 22%;
-    height: 450px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    font-family: arial;
-}
