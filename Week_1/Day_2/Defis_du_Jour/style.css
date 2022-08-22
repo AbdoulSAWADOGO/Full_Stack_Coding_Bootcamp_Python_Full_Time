@@ -25,7 +25,7 @@ li a
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 15px 17px;
+	padding: 14px 15px;
 	text-decoration: none;
 
 }
@@ -79,61 +79,6 @@ footer
 	background-size: cover;
 	color: white;
 	text-align: center;
-
 }
-
-
-
-@media only screen and (min-width: 600px){
-/*Pour les grands téléphones*/
-h2{
-	font-size: 30px;
-}
-nav{
-	background-color: green;
-}
-li{
-	color: black;
-}
-
-}
-
-@media only screen and (min-width: 768px){
-
-h2{
-	font-size: 33px;
-}
-nav{
-	background-color: gray;
-}
-li{
-	color: black;
-}
-
-}
-
-@media only screen and (min-width: 992px){
-/*Les appareils mettent t'a maar".*/
-nav{
-	background-color: blue;
-}
-li{
-	color: white;
-}
-div{
-	display: flex;
-}
-
-}
-
-@media only screen and (min-width: 1200px){
-/*Appareils ayant des créant remit les pieds*/
-nav{
-	background-color: black;
-}
-li{
-	color: white;
-}
-
 
 
