@@ -15,12 +15,14 @@ var affichage= "I watched " + myWatchedSeriesLength + " series : " + myWatchedSe
 //Partie 2
 //1-remplacer la serie big bang theory par friends en utilisant l'index
 myWatchedSeries[2]="friends";
-//Ajoutez, à la fin du tableau, le nom d'une autre série que vous avez regardée.
+//2-Ajoutez, à la fin du tableau, le nom d'une autre série que vous avez regardée.
 myWatchedSeries.push("3 femmes, 1 village");
-//Ajoutez, au début du tableau, le nom de votre série préférée.
+//3-Ajoutez, au début du tableau, le nom de votre série préférée.
 myWatchedSeries.unshift("Viking");
-//Supprimer la série « miroir noir ».
+//4-Supprimer la série « miroir noir ».
 myWatchedSeries.splice(1);
+//5-afficher la troisième lettre de money heist
+myWatchedSeries[2][3];
 
 //Exercice 3:Convertisseur de temperature
 var temperature = 37;
