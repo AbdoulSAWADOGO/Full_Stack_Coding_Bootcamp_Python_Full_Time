@@ -17,4 +17,7 @@ fruits.reverse();
 //exercice 1 achevé avec succès.
 
 
-
+//Exercice 2:
+let moreFruits = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
+moreFruits[1][1];
+//Cette commande affiche les oranges
