@@ -57,9 +57,20 @@ if ( Nemo != -1) {
 //Exercice 4
 
 
-    let number = prompt(" Svp entrez un numéro");
-    number = Number(number);
-    var renvoie = "Boum";
-    if (number < 2) {
+    let nombre = prompt(" Svp entrez un numéro");
+    nombre = Number(nombre);
+    var renvoie = "boum";
+    var i=1;
+    if (nombre < 2)
+    {//Si le nombre est inférieur à 2
 		console.log("le nombre est inférieur à 2 ====>", renvoie );
         }
+    else if ((nombre % 2) == 0)
+    {//Si le nombre est divisivle par 
+            console.log(" le nombre est divisible par 2 ====>" , renvoie + "!"); 
+        }
+    else if ((nombre % 5) == 0)
+    	{//Si le nombre est divisible par 5
+            console.log("divisible par 5 ====>" , renvoie.toUpperCase());
+        }
+    
