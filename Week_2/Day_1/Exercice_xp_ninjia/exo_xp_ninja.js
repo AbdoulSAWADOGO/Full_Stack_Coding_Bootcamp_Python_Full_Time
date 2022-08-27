@@ -73,4 +73,19 @@ if ( Nemo != -1) {
     	{//Si le nombre est divisible par 5
             console.log("divisible par 5 ====>" , renvoie.toUpperCase());
         }
-    
+    else if ((nombre % 5) && (nombre % 2) == 0)
+    {//Si le nombre est divisible par 5 et par 2
+        console.log(" ====>" , renvoie.toUpperCase() + "!");
+    }
+    else {//Si le nombre est supérieur à 2
+        for (i; i <= nombre ; i++) //nombre est le nombre entré par l'utilisateur
+           {
+            renvoie=renvoie+"o";
+           }
+		console.log("le nombre est supérieur à 2 ====>", renvoie );
+
+        }
+
+/*Exercice achevé avec succès.
+J'ai un peu souffert mais en testant à chaque fois, ça m'a permi de comprendre davantage de choses.
+C'était génial*/
