@@ -52,3 +52,14 @@ if ( Nemo != -1) {
 }
 
 //Après vérification, je me rend compte que la casse est sensible avec mon bout de code 
+
+
+//Exercice 4
+
+
+    let number = prompt(" Svp entrez un numéro");
+    number = Number(number);
+    var renvoie = "Boum";
+    if (number < 2) {
+		console.log("le nombre est inférieur à 2 ====>", renvoie );
+        }
