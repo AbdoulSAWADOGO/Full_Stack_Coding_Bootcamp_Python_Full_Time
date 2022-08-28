@@ -43,6 +43,31 @@ else
 }
 //Pas de difficultés rencontrées et achevé avec succès!
 
+//Exercice 4
+//Discussion de groupe
+//Tableau contenant les utilisateurs
+let users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000", "toto123"];
+//Detection du nombre d'utilisateurs connecté et affichage à l'aide de console.log
+//Affichage de la position de Nemo
+//Affichage de la réponse de si on a trouvé Nemo ou pas
+if (users.length == 0)
+{
+	console.log("Aucun utilisateur n'est connecté");
+}
+else if (users.length == 1)
+{
+	console.log(users[0]," est en ligne");
+}
+else if (users.length == 2)
+{
+	console.log(users[0], " et ", users[1], "sont en ligne");
+}
+else
+{
+	console.log(users[0], " ", users[1] , "et", users.length-2, " autres utilisateurs de plus sont en ligne");}
+//c'est un peu compliqué cet exercice là car je m'étais plongé dans la programmation des sockets avec des fonctions sockets bizarres
+//j'avais pensé au protocole de communication client serveur
+
 
 
 
