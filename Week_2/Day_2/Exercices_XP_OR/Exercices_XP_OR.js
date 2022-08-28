@@ -18,3 +18,27 @@ switch (langue) {
   default:
     console.log("01110011 01101111 01110010 01110010 01111001");
 }
+
+
+//Exercice 2
+//L'assignateur de notes
+//Demande de la note de l'utilisateur
+let note = prompt("Svp quelle est votre note?");
+note =Number(note);
+  if (note > 90){
+  	    console.log("A");
+  }
+else if (note >=80 && note <=90)
+{
+    console.log("B");
+}
+else if (note >=70 && note <=80)
+{
+    console.log("C");
+}
+else if (note <70)
+{
+    console.log("D");
+}
+
+//Exercice 2 terminé avec succès
