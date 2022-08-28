@@ -42,3 +42,20 @@ else if (note <70)
 }
 
 //Exercice 2 terminé avec succès
+
+//Exercice 3:
+//récupération du verbe de l'utilisateur
+let verbe = prompt("Svp veillez entrer un verbe");
+if (verbe.length >= 3 && verbe.substr(-3) != "ing")
+{
+    console.log(verbe + 'ing');
+}
+else if (verbe.length >= 3 && verbe.substr(-3) == "ing")
+{
+    console.log(verbe + 'ly');
+}
+else if (verbe.length < 3 )
+{
+	console.log(verbe);
+}
+//Exercice terminé sans difficulté particulière
