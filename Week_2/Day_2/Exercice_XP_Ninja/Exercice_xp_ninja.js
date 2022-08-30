@@ -1,4 +1,4 @@
-//Exercice 1
+//Exercice 1 : Différrence d'âge
 //Nous avons des années de naissance de deux personnes, trouvons la date à laquelle la plus jeune a exactement la moitié de l'âge de la plus âgée
 //Récuperation des deux années de naissances
 let annee_1 = prompt("Entrez la première année de naissance exemple:1998");
@@ -12,5 +12,18 @@ else {
 	console.log(annee);
 }
 //Exercice terminé avec succès. Aucune difficulté rencontrée car nous avons refléchi à l'algorithme et discuté ensemble en classe donc l'écriture du code en quelques minutes
-
-
+//Exercice 2 : Codes Postaux
+//Récupération de code postal
+let code_postal = prompt("entrer un code svp"); 
+//Conversion en nombre
+let code_postal_numb = Number(code_postal); 
+//Vérification du respect des quatre conditons données dans l'exercice
+if (code_postal.length == 5 && code_postal_numb)
+	{ 
+		console.log("Success");
+	} 
+else 
+	{ 
+		console.log("Error");
+	}
+//Exercice 2 sans expressions régulières
