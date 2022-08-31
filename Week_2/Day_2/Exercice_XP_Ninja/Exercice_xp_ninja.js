@@ -35,7 +35,17 @@ var mot_secret = prompt("Svp entrer un mot");
 mot_secret = mot_secret.replace(/[a,u,o,e,i]+/g,"");
 console.log(mot_secret);
 //Cette partie s'achève ici.
-
+let mot_secret = prompt("Svp entrer un mot");
+//Remplacement des voyelles par un autre caractère
+// mot_secret = mot_secret.replace(/a/g,"1");
+ // var str = 'welcom_to_waytolearnx.com';
+mot_secret = mot_secret.replace(/a/g, "1");
+mot_secret = mot_secret.replace(/e/g, "2");
+mot_secret = mot_secret.replace(/i/g, "3");
+mot_secret = mot_secret.replace(/o/g, "4");
+mot_secret = mot_secret.replace(/u/g, "5");
+console.log(mot_secret);
+//Exercice Bonus terminé avec succès
 
 
 
