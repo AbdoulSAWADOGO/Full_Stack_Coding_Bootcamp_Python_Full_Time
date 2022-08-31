@@ -27,3 +27,15 @@ else
 		console.log("Error");
 	}
 //Exercice 2 sans expressions régulières
+
+//Exercice 3 : Mot Secret
+	//Récupération du mot de l'utilisateur
+var mot_secret = prompt("Svp entrer un mot");
+//Suppression de toutes les voyelles du mot en utilisant les expressions régulières puis affichage
+mot_secret = mot_secret.replace(/[a,u,o,e,i]+/g,"");
+console.log(mot_secret);
+//Cette partie s'achève ici.
+
+
+
+
