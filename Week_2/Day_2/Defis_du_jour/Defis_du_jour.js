@@ -12,8 +12,7 @@ let wordBad = sentence.indexOf("bad");
 if (wordNot < wordBad)
 {
 	// reg = /not|bad/ig;
-	sentence = sentence.replace(/not/ig, "good");
-	sentence = sentence.replace(/bad/ig, "");
+	sentence = sentence.replace(sentence.substring(wordNot,wordBad+3), "good");	sentence = sentence.replace(/bad/ig, "");
 	console.log(sentence);
 }
 else {
@@ -21,3 +20,4 @@ else {
 }
 
 //La solution ne gère pas correctement ce qu'on a demandé
+//En demandant de l'aide à un collègue, je viens de trouver la solution qui m'a permi de perfectionner ma solution
