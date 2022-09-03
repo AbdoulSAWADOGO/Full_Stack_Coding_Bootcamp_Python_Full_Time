@@ -38,3 +38,23 @@ let nom_eleve = prompt("Entrer votre nom svp");
 		console.log("salut! je suis présent");
 	}
 	//Exercice 2 terminé avec succès
+
+	//Exercice 3 : jeu avec les chiffres
+	//copie du tableau donné
+	let age = [20,5,12,43,98,55];
+//La somme de tous les nombres du tableau
+total = 0;
+for (let i in age)
+{
+	total = total + age[i];
+}
+console.log(total);
+//Affichage de l'âge le plus elevé
+
+let agé = 0;
+	for (i in age)
+		if (age[i] > agé)
+			agé = age[i];
+	console.log("Le plus agé de la baie a ====> " + agé + " ans");
+
+//Exercice XP OR terminé avec succès
