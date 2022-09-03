@@ -16,7 +16,7 @@ console.log(numbers_convertis);
 //Bonus
 
 let numbers_tri = numbers.slice();
-	for( let i = 0; i < numbers_tri.length+15; i++) {	
+	for( let i = 0; i < numbers_tri.length; i++) {	
 		let toto;
 		for(let j = 0; j < numbers_tri.length; j++) {
 			if(numbers_tri[j] < numbers_tri[j+1]) {
