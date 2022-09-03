@@ -45,3 +45,12 @@ for ( let i in people){
 		break;
 	}
 }
+
+//Exercice 2 : Couleurs préférées
+//Création d'un tableau colors avec mes cinq couleurs preférées
+let colors = ["Blue","yellow","green","white","black"];
+//Bouclons en affichant du texte
+for (let i in colors){
+	let n=Number(i)+1;
+	console.log("Mon choix n°", n, "est", colors[i]);
+}
