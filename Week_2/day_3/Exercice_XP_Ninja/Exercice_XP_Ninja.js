@@ -37,3 +37,24 @@ function comparaison(){
 
 	//Exercice 1 terminé avec succès
 
+
+	//Exercice 2 :
+	//Moyenne Scolaire
+
+//Création de la fonction appelée findAvg(gradesList)qui prend un argument appelé gradesList.
+	function findAvg(gradeslist) {
+		Moyenne = 0;
+		for(let i of gradeslist)
+		{
+			Moyenne = Moyenne + i ;
+		}
+		//calcul et affichage de la Moyenne
+		Moyenne = (Moyenne/gradeslist.length);
+		if (Moyenne > 65)
+			console.log("Vous avez réussi!!!");
+		else 
+			console.log("Vous avez échoué, vous devez répéter le cours");		
+	}
+	findAvg([12,16,19,12,13,15,78,95]);
+
+	//Exercice XP Ninja terminé avec succès
