@@ -91,6 +91,7 @@ numero=Number(numero);
 //Nous pensons que la boucle do while est la mieux adaptée pour cette situation elle va récuperer la valeur avant de vérifier la condition et si y'a lieu de redemander une saisie elle le fera.
 
 
+
 //Exercice 4 : Gestion du Bâtiment
 //copie de l'objet
 
@@ -117,3 +118,13 @@ console.log("Le nombre d'appartements au premier est "+ building.numberOfAptByFl
 //Le nom du deuxième locataire et le nombre de pièces qu'il possède
 console.log("Le nom du second locataire est "+ building.nameOfTenants[1] + " et il possède " + building.numberOfRoomsAndRent.dan[0] + " pièces");
 //Vérification de loyer et augmentation si y'a lieu.
+
+if (building.numberOfRoomsAndRent.sarah[1] + building.numberOfRoomsAndRent.david[1] > building.numberOfRoomsAndRent.dan[1])
+{
+	building.numberOfRoomsAndRent.dan[1] = 1200;
+	console.log("Le loyer de " + building.nameOfTenants[1] + " devient " + 	building.numberOfRoomsAndRent.dan[1]);
+
+}
+
+
+//Exercice 4 terminé avec succès.
