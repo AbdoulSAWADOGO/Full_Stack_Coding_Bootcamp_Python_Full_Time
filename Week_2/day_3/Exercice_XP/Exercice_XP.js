@@ -128,3 +128,23 @@ if (building.numberOfRoomsAndRent.sarah[1] + building.numberOfRoomsAndRent.david
 
 
 //Exercice 4 terminé avec succès.
+
+
+
+//Exercice 5 : Famille
+//Création de l'objet famille
+
+let famille = {
+papa : "SAWADOGO",
+maman : "OUEDRAOGO",
+mamie : "Leila",
+}
+//Affichage avec les clés
+for ( let i in famille) {
+	console.log(i);
+}
+//Affichage avec les valeurs
+for (let i in famille) {
+	console.log(famille[i]);
+}
+//Fin de l'exercice 5
