@@ -15,3 +15,26 @@ for (let i in numbers)
 	}
 }
 //Exercice 1 terminé avec succès
+
+
+//Exercice 2 : Présence
+//Copie de l'objet donné
+let guestList = {
+  randy: "Germany",
+  karla: "France",
+  wendy: "Japan",
+  norman: "England",
+  sam: "Argentina"
+}
+
+//Demande du nom de l'élève
+let nom_eleve = prompt("Entrer votre nom svp");
+	if (nom_eleve in guestList)
+	{
+		console.log("salut! je suis " + nom_eleve + " ,et je viens de " + guestList[nom_eleve])
+	}
+	else
+	{
+		console.log("salut! je suis présent");
+	}
+	//Exercice 2 terminé avec succès
