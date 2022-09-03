@@ -148,3 +148,16 @@ for (let i in famille) {
 	console.log(famille[i]);
 }
 //Fin de l'exercice 5
+
+//Exercice 6 :
+//Instruction et suivons cette dernière
+//Objet offert
+let details = {
+  my: 'name',
+  is: 'Rudolf',
+  the: 'raindeer'
+}
+for (let i in details){
+	console.log(i,details[i]);
+} 
+//FIN
