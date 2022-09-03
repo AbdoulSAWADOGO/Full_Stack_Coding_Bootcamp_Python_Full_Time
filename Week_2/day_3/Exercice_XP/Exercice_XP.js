@@ -63,3 +63,29 @@ for (let i in colors){
 	console.log("Mon " + n+suffixes[i] + " choix est " + colors[i]);
 }
 //Bonus terminé avec succès
+
+//Exercice 3
+//Repeter la question
+//Demande d'un numero à l'utilisateur et affichage
+let numero = prompt("Svp entrer un numéro");
+console.log("votre numero est" ,numero);
+//récupération du type de la valeur
+let type= typeof(numero);
+//Conversion en nombre
+numero=Number(numero);
+
+//Utilisation de la boucle while et affichage
+
+while(1){
+
+let numero = prompt("Svp entrer un numéro");
+console.log("votre numero est" ,numero);
+numero=Number(numero);
+	if (numero< 10){
+        console.log("Svp entrer un numéro supérieur à 10");}
+	else{
+
+		break;
+	}
+}
+//Nous pensons que la boucle do while est la mieux adaptée pour cette situation elle va récuperer la valeur avant de vérifier la condition et si y'a lieu de redemander une saisie elle le fera.
