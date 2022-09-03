@@ -89,3 +89,31 @@ numero=Number(numero);
 	}
 }
 //Nous pensons que la boucle do while est la mieux adaptée pour cette situation elle va récuperer la valeur avant de vérifier la condition et si y'a lieu de redemander une saisie elle le fera.
+
+
+//Exercice 4 : Gestion du Bâtiment
+//copie de l'objet
+
+let building = {
+    numberOfFloors : 4,
+    numberOfAptByFloor : {
+        firstFloor : 3,
+        secondFloor : 4,
+        thirdFloor : 9,
+        fourthFloor : 2,
+    },
+    nameOfTenants : ["Sarah", "Dan", "David"],
+    numberOfRoomsAndRent:  {
+        sarah: [3, 990],
+        dan :  [4, 1000],
+        david : [1, 500],
+    },
+}
+
+//Affichage du nombre d'étage
+console.log("Le nombre d'étages est "+ building.numberOfFloors);
+//le nombre d'appartements aux étages 1 et 3
+console.log("Le nombre d'appartements au premier est "+ building.numberOfAptByFloor.firstFloor + " et au deuxième c'est " + building.numberOfAptByFloor.thirdFloor);
+//Le nom du deuxième locataire et le nombre de pièces qu'il possède
+console.log("Le nom du second locataire est "+ building.nameOfTenants[1] + " et il possède " + building.numberOfRoomsAndRent.dan[0] + " pièces");
+//Vérification de loyer et augmentation si y'a lieu.
