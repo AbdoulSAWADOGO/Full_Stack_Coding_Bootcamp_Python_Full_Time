@@ -54,3 +54,12 @@ for (let i in colors){
 	let n=Number(i)+1;
 	console.log("Mon choix n°", n, "est", colors[i]);
 }
+
+//Bonus : Utilisons maintenant les suffixes
+//Tableau de suffixes
+let suffixes = ["er","ième","ième","ième","ième"];
+for (let i in colors){
+	let n=Number(i)+1;
+	console.log("Mon " + n+suffixes[i] + " choix est " + colors[i]);
+}
+//Bonus terminé avec succès
