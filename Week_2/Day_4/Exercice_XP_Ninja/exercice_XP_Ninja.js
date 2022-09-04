@@ -15,3 +15,38 @@ for ( let i = 1 ; i <= nombre; i++)
 	}
 }
 //Exercice 1 terminé avec succès
+
+//Exercice 2 : Lettre Majuscules
+//Création d'une fonction qui prend une chaîne comme argument
+function Majuscule(chaine) 
+{
+let chaine_paire = "";
+let chaine_impaire = "";
+for ( let i = 0; i < chaine.length; i++)
+{
+	if (i%2 == 0)
+	{
+		chaine_paire += chaine[i].toUpperCase();
+	}
+	else
+	{
+		chaine_paire += chaine[i];
+	}
+}
+for ( let i = 0; i < chaine.length; i++)
+{
+	if (i%2 != 0)
+	{
+		chaine_impaire += chaine[i].toUpperCase();
+	}
+	else
+	{
+		chaine_impaire += chaine[i];
+	}
+}
+		console.log(chaine_paire,chaine_impaire);
+}
+
+	Majuscule("abcdef");
+
+
