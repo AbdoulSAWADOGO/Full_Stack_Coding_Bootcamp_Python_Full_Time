@@ -46,7 +46,6 @@ for ( let i = 0; i < chaine.length; i++)
 }
 		console.log(chaine_paire,chaine_impaire);
 }
-
-	Majuscule("abcdef");
+Majuscule("abcdef");
 
 
