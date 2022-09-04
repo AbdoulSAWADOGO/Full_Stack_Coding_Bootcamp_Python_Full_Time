@@ -169,6 +169,7 @@ function hotelCost()
 			}
 	}
 }
+hotelCost();
 //Fonction destination
 function planeRideCost() 
 {
@@ -197,6 +198,7 @@ function planeRideCost()
 			}
 	}
 }
+planeRideCost();
 
 //Fonction de location de voiture
 function rentalCarcost() 
@@ -225,4 +227,15 @@ function rentalCarcost()
 			}
 	}
 }
+rentalCarcost();
 
+//Fonction vocation totale
+function totalVacationCost() 
+{
+	console.log("L'hôtel coûte : ", hotelCost());
+	console.log("Les billets d'avions coûtent : ", planeRideCost());
+	console.log("La voiture coûte : ", rentalCarcost());
+}
+totalVacationCost();
+
+//Exercice XP terminé avec succès
