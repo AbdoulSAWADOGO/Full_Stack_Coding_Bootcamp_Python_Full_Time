@@ -64,3 +64,20 @@ function isDivisible()
 	}
 isDivisible();
 //Exercice 3 terminé avec succès
+
+//Bonus
+function isDivisible(divisor)
+{
+	console.log("Les nombres divisibles par : ", divisor)
+	let somme = 0;
+	for (let i = 0; i <= 500; i++)
+		{
+			if ( i % divisor == 0) 
+			{
+				console.log(i + " ");
+				somme += i;
+			}
+		}
+		console.log("Sum : ",somme);
+	}
+isDivisible(prompt("Entrer le diviseur svp==>"));
