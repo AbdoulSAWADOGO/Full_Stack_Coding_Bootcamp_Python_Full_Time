@@ -152,3 +152,49 @@ changeEnough(14.11, [2,100,0,0]);
 
 //Exercice 5 terminé avec succès
 
+//Exercice 6 : Frais de vacances
+//Création de fonctions qui calculent les coûts de vacances
+//Fonction hôtel
+function hotelCost() 
+{	
+	while(1) 
+	{
+		let nombreNuit = Number(prompt("Combien de nuits vous voulez passer ici svp"));
+			if (!nombreNuit) {
+				console.log("Redonner nous le nombre de nuits que vous souhaitez passer ici svp");
+			} 
+			else 
+			{
+				console.log("l'hôtel coûte 140$ par nuit")
+			}
+	}
+}
+//Fonction destination
+function planeRideCost() 
+{
+	while(1) 
+	{
+		let destination = string(prompt("Svp quelle est votre destination"));
+			if (!destination) 
+			{
+				console.log("Entrer à nouveau votre destination svp");
+			} 
+			else 
+			{
+				if (destination=="Londres") 
+					{
+						console.log("ça vous coutera 183$");
+					}
+				else if (destination=="Paris")
+					{
+						console.log("ça vous coutera 220$");
+					}
+				else
+					{
+						console.log("ça vous coutera 300$");
+					}
+				
+			}
+	}
+}
+
