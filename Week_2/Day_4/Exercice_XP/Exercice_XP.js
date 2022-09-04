@@ -42,5 +42,25 @@ function calculateTip(){
 	console.log("pourboire==> ", montant_pourboire, "$ et la facture total==> ",montant+montant_pourboire, "$");
 
 }
+//Appel de la fonction
 calculateTip();
 //Exercice 2 terminé
+
+//Exercice 3 : Trouver les nombres divisibles par 23
+//Création de la fonction isDivisible() sans parameters
+function isDivisible()
+{
+	console.log("Outcome : ")
+	let somme = 0;
+	for (let i = 0; i <= 500; i++)
+		{
+			if ( i % 23 == 0) 
+			{
+				console.log(i + " ");
+				somme += i;
+			}
+		}
+		console.log("Sum : ",somme);
+	}
+isDivisible();
+//Exercice 3 terminé avec succès
