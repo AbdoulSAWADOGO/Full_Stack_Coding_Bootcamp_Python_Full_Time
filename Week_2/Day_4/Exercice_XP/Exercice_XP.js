@@ -22,3 +22,25 @@ infoAboutPerson("SANKARA",22,"jaune");
 infoAboutPerson("David", 45, "blue");
 infoAboutPerson("Josh", 12, "yellow");
 //Fonction à trois paramètres terminée avec succès
+
+//Exercice 2 : 
+//Création de la fonction CalculateTip()
+function calculateTip(){
+	montant = Number(prompt ("quel est le montant de votre favture svp"));
+	if (montant < 50){
+		console.log("Laisser un pourboire de 20%");
+		montant_pourboire= (montant*20)/100;
+	}
+	else if (montant > 50 && montant < 200){
+		console.log("pourboire de 15%");
+		montant_pourboire= (montant*15)/100;
+	}
+	else{
+		console.log("Laisser un pouboire de 10%");
+		montant_pourboire= (montant*10)/100;
+	}
+	console.log("pourboire==> ", montant_pourboire, "$ et la facture total==> ",montant+montant_pourboire, "$");
+
+}
+calculateTip();
+//Exercice 2 terminé
