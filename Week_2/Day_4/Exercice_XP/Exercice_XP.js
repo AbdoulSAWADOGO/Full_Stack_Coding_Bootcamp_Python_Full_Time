@@ -81,3 +81,48 @@ function isDivisible(divisor)
 		console.log("Sum : ",somme);
 	}
 isDivisible(prompt("Entrer le diviseur svp==>"));
+
+//Exercice 4 : Liste des courses
+//Copie des objets donnés par l'exercice
+let stock = { 
+    "banana": 6, 
+    "apple": 0,
+    "pear": 12,
+    "orange": 32,
+    "blueberry":1
+}  
+
+let prices = {    
+    "banana": 4, 
+    "apple": 2, 
+    "pear": 1,
+    "orange": 1.5,
+    "blueberry":10
+} 
+
+//Création d'un tableau appelé shoppingList avec des éléments banane,orange et pomme
+let shoppingList =
+[
+	"banana",
+	"orange",
+	"apple"
+];
+//Créatio de la fonction myBill()
+function myBill()
+{
+let prix = 0;
+for(let i of shoppingList)
+	{
+			if (stock[i] > 0) //Si l'article est en stock
+			{
+				//Dimunition du stock de 1 le bonus
+				stock[i]=stock[i] - 1;
+				console.log("le prix est ", prices[i]);
+			} 
+			else 
+			{
+				console.log("L'article ", i ,"n'est pas en stock");
+			}
+	}
+}
+myBill();	
