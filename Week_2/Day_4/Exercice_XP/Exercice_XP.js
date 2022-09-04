@@ -198,3 +198,31 @@ function planeRideCost()
 	}
 }
 
+//Fonction de location de voiture
+function rentalCarcost() 
+{
+	while(1) 
+	{
+		let voiture = Number(prompt("Combien de jours souhaitez vous louer la voiture"));
+			if (!voiture)
+			{
+				console.log("Svp veuiller redonner le nombre de voiture que vous voulez louer"); 				
+			} 
+			else 
+			{
+				console.log("le prix de location d'une voiture par jour fait 40$")
+				if (voiture > 10)
+					{
+						reduc =((40*voiture)*5)/100;
+						prix = (40*voiture)-reduc;
+					}
+				else 
+					{
+						prix= 40*voiture;
+					}
+						console.log("le prix total de location des voitures par jour fait==>", prix);
+
+			}
+	}
+}
+
