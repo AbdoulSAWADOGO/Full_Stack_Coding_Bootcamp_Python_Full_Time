@@ -125,4 +125,30 @@ for(let i of shoppingList)
 			}
 	}
 }
-myBill();	
+myBill();
+
+//Exercice 5 : Ce qu'il y'a dans mon portefeuille
+
+function changeEnough(itemPrice, amountOfChange) 
+{
+	//Calcul du montant de la monnaie disponible dans ma poche
+	let monnaie = 0;
+	monnaie += amountOfChange[0]*0.25;
+	monnaie += amountOfChange[1]*0.10;
+	monnaie += amountOfChange[2]*0.05;
+	monnaie += amountOfChange[3]*0.01;
+	//Comparaison de la monnaie et du prix de la marchandise
+		if(monnaie >= itemPrice) 
+		{
+			console.log("True");
+		} 
+		else 
+		{
+			console.log("false");
+		}
+}
+changeEnough(4.25, [25, 20, 5, 0]);
+changeEnough(14.11, [2,100,0,0]);
+
+//Exercice 5 terminé avec succès
+
