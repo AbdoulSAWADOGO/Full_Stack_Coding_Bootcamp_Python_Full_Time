@@ -49,3 +49,27 @@ function Casse(chaine)
 		console.log(chaine_finale);
 }
 Casse('The Quick Brown Fox');
+//Exercice 4
+//Valeur Omniprésente
+//Fonction vérifiant si un argument est omniprésent pour un tableau donné
+function Omnipresence(tableau, valeur_cherchée) 
+{
+	for (let i of tableau)
+	{
+		for(let x of i)
+		{
+			if (valeur_cherchée == x)
+			{
+				console.log("True");
+			}
+			else
+			{
+				console.log("False");
+			}
+		}
+	}
+}
+
+Omnipresence([[1, 1], [1, 3], [5, 1], [6, 1]], 1);
+Omnipresence([[1, 1], [1, 3], [5, 1], [6, 1]], 6);
+//Exercice 4 terminé mais pas en bonne forme
