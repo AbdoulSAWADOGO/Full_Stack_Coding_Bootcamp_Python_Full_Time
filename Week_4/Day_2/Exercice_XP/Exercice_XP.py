@@ -60,6 +60,14 @@ print(basket)
 floats = ['1.5','2','2.5','3','3.5','4','4.5','5']
 print(floats)
 
+#Exercice 5 : Boucle For
+#Utilisation de la boucle for pour imprimer les nombre de 1 à 20
+for i in range(1,21):
+    print(i)
+#En utilisant toujours la boucle, impression des éléments  pairs
+for i in range(0,20,2):
+    print(i)
+
 
 
 
