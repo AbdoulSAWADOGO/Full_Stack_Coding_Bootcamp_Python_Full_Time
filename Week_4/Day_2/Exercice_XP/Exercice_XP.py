@@ -68,6 +68,14 @@ for i in range(1,21):
 for i in range(0,20,2):
     print(i)
 
+#Exercice 6 : Réalisation d'une boucle while pour récuperer un nom
+Ton_nom = input("entrer un nom svp==>")
+Mon_nom = "Abdoul"
+while Ton_nom != Mon_nom:
+    Ton_nom=input("Svp changer de nom ==>")
+print("Félicitations! Ce nom est le mien.")
+    
+
 
 
 
