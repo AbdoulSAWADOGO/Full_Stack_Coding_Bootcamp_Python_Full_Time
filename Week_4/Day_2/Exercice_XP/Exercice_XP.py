@@ -1,5 +1,8 @@
 #Exercice 1 : Set
 #Création de l'ensemble my_fav_numbers et affichage
+from ntpath import join
+
+
 my_fav_numbers = {'3','9','15','1','12','9','17','9','21'}
 print(my_fav_numbers)
 #Ajout de deux nouveaux numéros à l'ensemble
@@ -75,6 +78,25 @@ while Ton_nom != Mon_nom:
     Ton_nom=input("Svp changer de nom ==>")
 print("Félicitations! Ce nom est le mien.")
     
+
+#Exercice 7 : Fruits Préférés
+#Demande du fruit préféré de l'utilisateur
+Fruits=input("Svp, quel est votre fruit ou vos fruits préférés? Si vous preferez beaucoup de fruits, separez les par des espaces ' '.Exemple:apple mango cherry==>")
+print(Fruits)
+#conversion en une liste
+# Fruits=list(Fruits)
+Fruits=Fruits.split(' ')
+print(Fruits)
+#Comparaison et vérification
+fruit=input("Donner nous le nom d'un fruit svp==>")
+test=0
+for fruit1 in Fruits:
+    if fruit1==fruit:
+        test = test + 1
+if test>=1:
+    print("Vous avez choisi un de vos fruits préférés! prennez paisir!")
+else:
+    print("Vous avez choisi un nouveau fruit. J'espère que vous l'appréciez")
 
 
 
