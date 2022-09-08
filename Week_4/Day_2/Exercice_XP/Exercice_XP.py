@@ -59,8 +59,10 @@
 # #Exercice 4 : Flotteurs
 # #La différrence est que les entiers sont sans virgule tandis que les réels sont des valeurs décimales
 # #J'ai réfléchi en faisant des tests sur ma console mais je ne trouve pas  une autre manière de générer des floats
-# #Création de la liste demandée sur l'exercice
-# floats = ['1.5','2','2.5','3','3.5','4','4.5','5']
+# #Création de la liste demandée sur l'exercice mais pas coder en dur ['1.5','2','2.5','3','3.5','4','4.5','5']
+# floats= []
+# for i in range(3,11):
+#     floats.append(i/2)
 # print(floats)
 
 # #Exercice 5 : Boucle For
@@ -144,22 +146,39 @@ from operator import index, indexOf
 Vos_nom = input("entrer vos noms séparés par des espaces svp==>")
 Vos_nom = Vos_nom.split(' ')
 print(Vos_nom)
-# stop=1
 Ton_nom = ""
 Ton_age=0
-# while  stop:
 for i in Vos_nom:
         Ton_age=int(input("quel est ton âge? ==>"))
         print(i)
         if Ton_age >=16 and Ton_age<=21:
             print("tu peux regarder ton film")
-            print(Vos_nom)
+            id=Ton_nom[i]
+            print(id)
+
         else:
-            Vos_nom.pop(0)
+            id=i
+            print(id)
+            Vos_nom.pop(id)
 print(Vos_nom)
 
 
 
+
+my_books = {
+  "title": "Harry Potter",
+  "author": "JK Rowling",
+}
+
+for x, y in my_books.items():
+    print("the " + x + " is " + y)
+
+my_number = '1234'
+my_list = []
+
+for num in my_number:
+    my_list.append(num)
+print(my_list)
 
 
 
