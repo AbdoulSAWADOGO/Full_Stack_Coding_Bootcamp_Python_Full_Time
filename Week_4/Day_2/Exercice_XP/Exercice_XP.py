@@ -46,9 +46,19 @@ print(basket)
 nbr=basket.count('Pommes')
 print(nbr)
 
-#Vider le panier
+#Vider le panier et affichage
 basket.clear()
 print(basket)
+#Impression du panier
+print(basket)
+
+
+#Exercice 4 : Flotteurs
+#La différrence est que les entiers sont sans virgule tandis que les réels sont des valeurs décimales
+#J'ai réfléchi en faisant des tests sur ma console mais je ne trouve pas  une autre manière de générer des floats
+#Création de la liste demandée sur l'exercice
+floats = ['1.5','2','2.5','3','3.5','4','4.5','5']
+print(floats)
 
 
 
