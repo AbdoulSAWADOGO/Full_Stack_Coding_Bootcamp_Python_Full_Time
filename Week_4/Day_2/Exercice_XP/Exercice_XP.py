@@ -143,24 +143,57 @@
 # from operator import index, indexOf
 
 
-Vos_nom = input("entrer vos noms séparés par des espaces svp==>")
-Vos_nom = Vos_nom.split(' ')
-print(Vos_nom)
-Ton_nom = ""
-Ton_age=0
-for i in Vos_nom:
-        Ton_age=int(input("quel est ton âge? ==>"))
-        print(i)
-        if Ton_age >=16 and Ton_age<=21:
-            print("tu peux regarder ton film")
-            # id=Ton_nom[i]
-            # print(id)
+# Vos_nom = input("entrer vos noms séparés par des espaces svp==>")
+# Vos_nom = Vos_nom.split(' ')
+# print(Vos_nom)
+# Ton_nom = ""
+# Ton_age=0
+# for i in Vos_nom:
+#         Ton_age=int(input("quel est ton âge? ==>"))
+#         print(i)
+#         if Ton_age >=16 and Ton_age<=21:
+#             print("tu peux regarder ton film")
+#         else:
+#             Vos_nom.remove(i)
+# print(Vos_nom)
 
-        else:
-            # id=i
-            # print(id)
-            Vos_nom.remove(i)
-print(Vos_nom)
+
+#Exercice 10
+#Utilisation de la liste donnée par l'exercice
+sandwich_orders = ["Tuna sandwich", "Avocado sandwich", "Egg sandwich", "Sabih sandwich", "Pastrami sandwich"]
+#réation d'une liste vide
+# finished_sandwiches=[]
+# #Déplacement des sandwich quand c'est préparé
+# print("la liste initiale ",sandwich_orders)
+# etat_sandwich=1
+# for sandwich in sandwich_orders:
+#         etat_sandwich=input("quel est l'etat du sandwich? taper 1 pour valider==>")
+#         if etat_sandwich and len(sandwich_orders)!=0:
+#             finished_sandwiches.append(sandwich)
+#             sandwich_orders.remove(sandwich)
+#             # res = finished_sandwiches.insert(0, sandwich_orders.pop(sandwich_orders.index(sandwich)))
+#             print("la liste des sandwichs prêts",finished_sandwiches)
+#             print("la liste des sandwichs pas prêts",sandwich_orders)
+#         # if sandwich_orders==[]:
+#             # print("I made your ", sandwich , "sandwich")
+
+
+finished_sandwiches=[]
+#Déplacement des sandwich quand c'est préparé
+print("la liste initiale ",sandwich_orders)
+etat_sandwich=1
+for sandwich in sandwich_orders:
+    etat=int(input("quel est l'etat du sandwich? taper 1 pour valider==>"))
+    while etat_sandwich==etat:
+        finished_sandwiches.append(sandwich)
+        sandwich_orders.remove(sandwich)
+        print("la liste des sandwichs prêts",finished_sandwiches)
+        print("la liste des sandwichs pas prêts",sandwich_orders)
+        break
+            # res = finished_sandwiches.insert(0, sandwich_orders.pop(sandwich_orders.index(sandwich)))
+        
+        # if sandwich_orders==[]:
+            # print("I made your ", sandwich , "sandwich")
 
 
 
