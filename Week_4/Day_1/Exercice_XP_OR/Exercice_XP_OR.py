@@ -10,6 +10,6 @@ elif (Mois <=6 and Mois >=8) :
 	print("été")
 elif (Mois <=9 and Mois >=11) :
 	print(" automne ")
-elif (Mois>=12 and Mois<=2) :
+elif (Mois>=12 or Mois ==1 or Mois==2) :
 	print("hiver")
 
