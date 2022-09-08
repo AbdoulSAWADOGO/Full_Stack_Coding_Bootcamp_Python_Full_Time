@@ -25,6 +25,33 @@ print("la concaténation donne ==> ", our_fav_numbers)
 #C'est pas possible d'ajouter d'autres entiers au tuble car ça serait une modification de ce dernier. Rappelons nous que nous ne pouvons pas modifier le contenu d'un tuple
 
 #Exercice 3 : List
+#Utilisation de la liste offerte par l'exercice
+basket = ["Banana","Apples","Oranges","Blueberries"]
+print(basket)
+#suppression de Banana de la liste  et affichage
+basket.pop(0)
+print(basket)
+#Suppression de Myetilles de la liste
+#Impossible de supprimer un élément qui n'existe pas. Nous ne pouvons pas l'atteindre
+
+#Ajout de Kiwi à la fin de la liste et affichage
+basket.append('Kiwi')
+print(basket)
+
+#Ajout de pomme au début de la liste
+basket.insert(0,'Pommes')
+print(basket)
+
+#compter le nombre de pommes dans le panier et affichage
+nbr=basket.count('Pommes')
+print(nbr)
+
+#Vider le panier
+basket.clear()
+print(basket)
+
+
+
 
 
 
