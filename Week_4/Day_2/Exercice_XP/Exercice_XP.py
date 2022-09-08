@@ -98,6 +98,22 @@ if test>=1:
 else:
     print("Vous avez choisi un nouveau fruit. J'espère que vous l'appréciez")
 
+#Exercice 8 : ommande de Pizza
+#boucle de series de garnitures
+arret="quitter"
+tout=' '
+prix=10 
+Pizza = ''
+while Pizza != arret: 
+    Pizza = input("entrer une garniture de pizza. taper'quitter' pour stopper==>")
+    if Pizza != arret:
+        print(f"Vous venez d'ajouter la garniture suivante: {Pizza} à votre pizza")
+        tout += Pizza
+        prix += 2.5
+print(f"Toutes les garnitures que vous avez ajouté sont: {tout} ")
+print(f"le prix total de la pizza est: {prix}")
+
+
 
 
 
