@@ -116,8 +116,8 @@
 # print(f"le prix total de la pizza est: {prix}")
 
 
-# #Exercice 9 : Cinémax
-# #calcul des prix de billets de cinéma d'une famille
+#Exercice 9 : Cinémax
+#calcul des prix de billets de cinéma d'une famille
 # prix=0
 # famille=""
 # arret=0
@@ -140,7 +140,7 @@
 
 # #Film réservé aux personnes agées. Vérifions cela
 
-from operator import index, indexOf
+# from operator import index, indexOf
 
 
 Vos_nom = input("entrer vos noms séparés par des espaces svp==>")
@@ -153,32 +153,18 @@ for i in Vos_nom:
         print(i)
         if Ton_age >=16 and Ton_age<=21:
             print("tu peux regarder ton film")
-            id=Ton_nom[i]
-            print(id)
+            # id=Ton_nom[i]
+            # print(id)
 
         else:
-            id=i
-            print(id)
-            Vos_nom.pop(id)
+            # id=i
+            # print(id)
+            Vos_nom.remove(i)
 print(Vos_nom)
 
 
 
 
-my_books = {
-  "title": "Harry Potter",
-  "author": "JK Rowling",
-}
-
-for x, y in my_books.items():
-    print("the " + x + " is " + y)
-
-my_number = '1234'
-my_list = []
-
-for num in my_number:
-    my_list.append(num)
-print(my_list)
 
 
 
