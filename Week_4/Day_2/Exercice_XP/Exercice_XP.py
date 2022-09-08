@@ -1,4 +1,4 @@
-#Exercice 1
+#Exercice 1 : Set
 #Création de l'ensemble my_fav_numbers et affichage
 my_fav_numbers = {'3','9','15','1','12','9','17','9','21'}
 print(my_fav_numbers)
@@ -19,8 +19,12 @@ friend_fav_numbers = {'19','4','45','78','9'}
 #Concaténation des deux ensembles
 our_fav_numbers = my_fav_numbers.union(friend_fav_numbers)
 set(our_fav_numbers)
-
 print("la concaténation donne ==> ", our_fav_numbers)
+
+#Exercice 2 : Tuple
+#C'est pas possible d'ajouter d'autres entiers au tuble car ça serait une modification de ce dernier. Rappelons nous que nous ne pouvons pas modifier le contenu d'un tuple
+
+#Exercice 3 : List
 
 
 
