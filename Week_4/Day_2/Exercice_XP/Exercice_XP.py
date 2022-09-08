@@ -162,38 +162,23 @@
 #Utilisation de la liste donnée par l'exercice
 sandwich_orders = ["Tuna sandwich", "Avocado sandwich", "Egg sandwich", "Sabih sandwich", "Pastrami sandwich"]
 #réation d'une liste vide
-# finished_sandwiches=[]
-# #Déplacement des sandwich quand c'est préparé
-# print("la liste initiale ",sandwich_orders)
-# etat_sandwich=1
-# for sandwich in sandwich_orders:
-#         etat_sandwich=input("quel est l'etat du sandwich? taper 1 pour valider==>")
-#         if etat_sandwich and len(sandwich_orders)!=0:
-#             finished_sandwiches.append(sandwich)
-#             sandwich_orders.remove(sandwich)
-#             # res = finished_sandwiches.insert(0, sandwich_orders.pop(sandwich_orders.index(sandwich)))
-#             print("la liste des sandwichs prêts",finished_sandwiches)
-#             print("la liste des sandwichs pas prêts",sandwich_orders)
-#         # if sandwich_orders==[]:
-#             # print("I made your ", sandwich , "sandwich")
-
-
 finished_sandwiches=[]
 #Déplacement des sandwich quand c'est préparé
 print("la liste initiale ",sandwich_orders)
-etat_sandwich=1
-for sandwich in sandwich_orders:
-    etat=int(input("quel est l'etat du sandwich? taper 1 pour valider==>"))
-    while etat_sandwich==etat:
-        finished_sandwiches.append(sandwich)
-        sandwich_orders.remove(sandwich)
-        print("la liste des sandwichs prêts",finished_sandwiches)
-        print("la liste des sandwichs pas prêts",sandwich_orders)
-        break
-            # res = finished_sandwiches.insert(0, sandwich_orders.pop(sandwich_orders.index(sandwich)))
-        
-        # if sandwich_orders==[]:
-            # print("I made your ", sandwich , "sandwich")
+while sandwich_orders != [] :
+    etat_sandwich=input("quel est l'etat du sandwich? taper 1 pour valider et une lettre pour quitter==>")
+    if int(etat_sandwich):
+        finished_sandwiches.append(sandwich_orders[0])
+        sandwich_orders.remove(sandwich_orders[0])
+        # res = finished_sandwiches.insert(0, sandwich_orders.pop(sandwich_orders.index(sandwich)))
+        # print("la liste des sandwichs prêts",finished_sandwiches)
+        # print("la liste des sandwichs pas prêts",sandwich_orders)
+else:
+    for i in finished_sandwiches:
+         print("I made your ", i)
+
+
+
 
 
 
