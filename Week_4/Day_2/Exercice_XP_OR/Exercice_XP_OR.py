@@ -83,13 +83,21 @@
 import random
 #Exercice 9 : Nombre Aléatoire
 #Demande à l'utilisateur d'entrer un nombre de 1 à 9 (y compris)
-nombre=int(input("Svp entrer un nombre compris entre 1 et 9==>"))
-#Obtention d'un nombre aléatoire entre 1 et 9
-alea=random.randrange(0,10)    
-print("Le nombre aléatoire est:",alea)
-#Vérification du nombre de l'utilisateur
-if alea == nombre:
-    print("Vous venez de tirer le bon numéro. Félicitations")
-else:
-    print("Désolé. vous aurez la chance la prochaine fois")
-    
+stop=1
+part1=0
+part2=0
+while stop == 1:#Premier bonus réalisé
+    nombre=int(input("Svp entrer un nombre compris entre 1 et 9 et taper une lettre pour quitter==>"))
+    stop=int(input("taper 1 pour continuer et un autre chiffre pour quitter"))#Bonus
+    #Obtention d'un nombre aléatoire entre 1 et 9
+    alea=random.randrange(0,10)    
+    print("Le nombre aléatoire est:",alea)
+    #Vérification du nombre de l'utilisateur
+    if alea == nombre:
+        print("Vous venez de tirer le bon numéro. Félicitations")
+        part1 += 1#Bonus
+    else:
+        print("Désolé. vous aurez la chance la prochaine fois")
+        part2 += 1#Bonus
+print("Vous avez perdu", part2 , "fois\nVous avez gagné", part1 , "fois")#Bonus
+        
