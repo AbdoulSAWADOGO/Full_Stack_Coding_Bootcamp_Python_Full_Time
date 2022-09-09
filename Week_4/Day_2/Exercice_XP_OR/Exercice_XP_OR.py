@@ -73,12 +73,23 @@
 # nombre=sum(liste)
 # print(nombre)
 
-#Exercice 8 : 
-
-#Ecriture du programme acceptant les séquences de nombres séparés par des virgules
-nombre=input("Svp entrer des nombres et séparer les par des virgules==>")
-nombre=nombre.split(',')
-print(nombre)
-nombre=tuple(nombre)
-print(nombre)
+#Exercice 8 : Liste et Tuple
+# #Ecriture du programme acceptant les séquences de nombres séparés par des virgules
+# nombre=input("Svp entrer des nombres et séparer les par des virgules==>")
+# nombre=nombre.split(',')
+# print(nombre)
+# nombre=tuple(nombre)
+# print(nombre)
+import random
+#Exercice 9 : Nombre Aléatoire
+#Demande à l'utilisateur d'entrer un nombre de 1 à 9 (y compris)
+nombre=int(input("Svp entrer un nombre compris entre 1 et 9==>"))
+#Obtention d'un nombre aléatoire entre 1 et 9
+alea=random.randrange(0,10)    
+print("Le nombre aléatoire est:",alea)
+#Vérification du nombre de l'utilisateur
+if alea == nombre:
+    print("Vous venez de tirer le bon numéro. Félicitations")
+else:
+    print("Désolé. vous aurez la chance la prochaine fois")
     
