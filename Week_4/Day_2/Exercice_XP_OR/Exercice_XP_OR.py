@@ -13,3 +13,15 @@ print(liste1)
 for i in range(1500,2501):
     if i%5==0 or i%7==0:
         print(i)
+
+#Exercice 3 : Vérification de l'index
+#Utilisation de la liste donnée par l'exercice
+from operator import index
+
+
+names = ['Samus', 'Cortana', 'V', 'Link', 'Mario', 'Cortana', 'Samus']
+Nom_utilisateur=input("Donner nous votre nom svp==>")
+for i,nom in enumerate(names):
+    if nom == Nom_utilisateur:
+        print(nom , "a pour index:" ,i)
+        break
