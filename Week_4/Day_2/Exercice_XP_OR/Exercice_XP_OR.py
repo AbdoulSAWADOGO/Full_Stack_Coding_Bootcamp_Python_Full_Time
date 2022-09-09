@@ -55,13 +55,23 @@
 #         else:
 #             print("la lettre", i , "est une consonne")
 
-#Exercice 6 : Mots et lettres
-#Récupération 7 mots avec l'utilisateur
-words=input("Svp entrer 7 mots et séparer les par des espaces==>")
-words=words.split(' ')
-print(words)
-letter=input("entrer un seul caractère==>")
-for i in words:
-    if letter in i:
-        print("Votre lettre se trouve à l'index",i.index(letter),"du mot",i)
+# #Exercice 6 : Mots et lettres
+# #Récupération 7 mots avec l'utilisateur
+# words=input("Svp entrer 7 mots et séparer les par des espaces==>")
+# words=words.split(' ')
+# print(words)
+# letter=input("entrer un seul caractère==>")
+# for i in words:
+#     if letter in i:
+#         print("Votre lettre se trouve à l'index",i.index(letter),"du mot",i)
+
+#Exercice 7 :
+#Création d'une liste de 1 à 1.000.000
+liste=[i for i in range(0,1000001)] 
+print(min(liste))
+print(max(liste))
+nombre=sum(liste)
+print(nombre)
+
+
     
