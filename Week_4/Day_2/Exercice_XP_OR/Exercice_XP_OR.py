@@ -55,7 +55,6 @@
 #         else:
 #             print("la lettre", i , "est une consonne")
 
-
 #Exercice 6 : Mots et lettres
 #Récupération 7 mots avec l'utilisateur
 words=input("Svp entrer 7 mots et séparer les par des espaces==>")
