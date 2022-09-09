@@ -65,13 +65,20 @@
 #     if letter in i:
 #         print("Votre lettre se trouve à l'index",i.index(letter),"du mot",i)
 
-#Exercice 7 :
-#Création d'une liste de 1 à 1.000.000
-liste=[i for i in range(0,1000001)] 
-print(min(liste))
-print(max(liste))
-nombre=sum(liste)
+# #Exercice 7 :
+# #Création d'une liste de 1 à 1.000.000
+# liste=[i for i in range(0,1000001)] 
+# print(min(liste))
+# print(max(liste))
+# nombre=sum(liste)
+# print(nombre)
+
+#Exercice 8 : 
+
+#Ecriture du programme acceptant les séquences de nombres séparés par des virgules
+nombre=input("Svp entrer des nombres et séparer les par des virgules==>")
+nombre=nombre.split(',')
 print(nombre)
-
-
+nombre=tuple(nombre)
+print(nombre)
     
