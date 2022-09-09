@@ -26,15 +26,43 @@
 #         print(nom , "a pour index:" ,i)
 #         break
 
-#Exercice 4 :Le plus grand nombre
-#Demande de 3 nombres avec l'utilisateur
-liste=[]
-toto=0
-for i in range(0,3):
-    Nombre=input("Svp entrer un nombre==>")
-    liste.append(Nombre)
-# print(liste)
-for x in liste:
-    if int(x) > int(toto):
-        toto=x
-print(toto)
+# #Exercice 4 :Le plus grand nombre
+# #Demande de 3 nombres avec l'utilisateur
+# liste=[]
+# toto=0
+# for i in range(0,3):
+#     Nombre=input("Svp entrer un nombre==>")
+#     liste.append(Nombre)
+# # print(liste)
+# for x in liste:
+#     if int(x) > int(toto):
+#         toto=x
+# print(toto)
+
+
+# #Exercice 5 : L'alphabet
+# #Création d'une chaine avec les lettres de l'alphabet
+# # for i in range('a','z'):
+# #     print(i)
+# import string
+# alphabet = string.ascii_lowercase
+# list = list(alphabet)
+# print(list)
+# voyeles=['a','e','o','i','u','y']
+# for i in list:
+#         if i in voyeles:
+#             print("la lettre", i , "est une voyelle")
+#         else:
+#             print("la lettre", i , "est une consonne")
+
+
+#Exercice 6 : Mots et lettres
+#Récupération 7 mots avec l'utilisateur
+words=input("Svp entrer 7 mots et séparer les par des espaces==>")
+words=words.split(' ')
+print(words)
+letter=input("entrer un seul caractère==>")
+for i in words:
+    if letter in i:
+        print("Votre lettre se trouve à l'index",i.index(letter),"du mot",i)
+    
