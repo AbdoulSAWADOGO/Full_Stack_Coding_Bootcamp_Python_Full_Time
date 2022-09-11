@@ -7,16 +7,7 @@ i=Naissance[-1]
 annee=Naissance[6:10]
 annee=int(annee)
 print(annee)
-# for i in range(0,int(i)):
-#     t +="i"
-# print("    __",t,"__")
-# print("   |:H:a:p:p:y:|")
-# print(" __|___________|__")
-# print("|^^^^^^^^^^^^^^^^^^|")
-# print("| :B:i:r:t:h:d:a:y:|")
-# print("|                  |")
-# print("~~~~~~~~~~~~~~~~~~~~")
-if(annee%4==0 and annee%100!= 0 or annee%400==0):
+if(annee%4==0 and annee%100!= 0 or annee%400==0):#Bonus
     for x in range(2):
         for i in range(0,int(i)):
             t +="i"
