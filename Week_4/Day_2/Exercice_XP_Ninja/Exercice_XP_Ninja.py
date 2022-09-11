@@ -68,21 +68,32 @@
 # print("le plus grand nombre est",max(valeur))
 # print("le plus petit nombre est",min(valeur))
 
-#Exercice 3 : Travail sur un paragraphe
-#Recherche d'un texte intéressant en ligne parlant du contexte social er de DI
-#récupération de ce texte dans une variable
-paragraphe="Developers Institute est le partenaire officiel de formation de l'Autorité israélienne de l'innovation pour le développement Web dans l'industrie technologique. D'après Switchup, Developers Institute se positionne à la 31è position mondiale, dans le classement des meilleures Startups de l'année 2021!"
-paragraphe=paragraphe.split(' ')
-print(paragraphe)
-#Analyse du paragraphe et affichage de nombre de caractères
-carac=len(paragraphe)
-print("Le nombre de caractères du texte est:",carac)
-#Recherche et affichage du nombre de phrase dans le paragraphe
-phrase=(str(carac).split(','))
-print(phrase)
-#Recherche et affichage du nombre de mots dans le paragraphe
-result=(str(carac).split(' '))
-print(result)
+# #Exercice 3 : Travail sur un paragraphe
+# #Recherche d'un texte intéressant en ligne parlant du contexte social er de DI
+# #récupération de ce texte dans une variable
+# paragraphe="Developers Institute est le partenaire officiel de formation de l'Autorité israélienne de l'innovation pour le développement Web dans l'industrie technologique. D'après Switchup, Developers Institute se positionne à la 31è position mondiale, dans le classement des meilleures Startups de l'année 2021!"
+# paragraphe=paragraphe.split(' ')
+# print(paragraphe)
+# #Analyse du paragraphe et affichage de nombre de caractères
+# carac=len(paragraphe)
+# print("Le nombre de caractères du texte est:",carac)
+# #Recherche et affichage du nombre de phrase dans le paragraphe
+# phrase=(str(carac).split(','))
+# print(phrase)
+# #Recherche et affichage du nombre de mots dans le paragraphe
+# result=(str(carac).split(' '))
+# print(result)
+
+#Exercice 4 : 
+#Implémentation d'un programme qui imprime la fréquence des mots d'une entrée de l'utilisateur
+mots=input("Entrer une suite de mots svp==>")
+toto=0
+mots=mots.split(' ')
+print(mots)
+for mot in mots:
+    freq=mots.count(mot)
+    print(mot,":",freq)
+    
 
 
 
