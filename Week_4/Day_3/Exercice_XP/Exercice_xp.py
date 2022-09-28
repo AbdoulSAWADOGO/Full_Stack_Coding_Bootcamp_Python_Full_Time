@@ -79,7 +79,6 @@ more_on_zara = {
 
 brand.update(more_on_zara)
 # Impression de la valeur de la clé number_stores. 
-print(brand["number_stores"])
 # Qu'est-ce qui vient juste de se passer ?
 #on affiche 10.000. Ce qui veut dire que une mise à jour a été faite sur la variable
 #Exercice 3 terminé
