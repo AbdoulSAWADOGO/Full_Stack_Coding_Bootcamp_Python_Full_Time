@@ -41,14 +41,28 @@
 
 #Exercice 5 : Création de chemises personnalisées
 #Écrivons une fonction appelée make_shirt()qui accepte une taille et le texte d'un message qui doit être imprimé sur la chemise.
-def make_shirt(taille=45,texte_of_message="I love python"):
-    print(f"La taille de la chemise est {taille} et le texte est==>{texte_of_message}")
-make_shirt(32, "M. Malick est super instructeur")
-#Réalisation d'une grande chemise avec le message par défaut
-make_shirt(100)
-#Réalisation d'une moyenne chemise avec le message par défaut
-make_shirt(55)
-#Réalisation d'une chemise de taille quelconque avec un message différent
-make_shirt(48, "M. Malick est super cool")
+# def make_shirt(taille=45,texte_of_message="I love python"):
+#     print(f"La taille de la chemise est {taille} et le texte est==>{texte_of_message}")
+# make_shirt(32, "M. Malick est super instructeur")
+# #Réalisation d'une grande chemise avec le message par défaut
+# make_shirt(100)
+# #Réalisation d'une moyenne chemise avec le message par défaut
+# make_shirt(55)
+# #Réalisation d'une chemise de taille quelconque avec un message différent
+# make_shirt(48, "M. Malick est super cool")
+# #Exercice 5 terminé
 
+#Exercice 6 : Magiciens...
+#Utilisation de la liste donnée par l'exercice
+magician_names = ['Harry Houdini', 'David Blaine', 'Criss Angel']
+#Passons la liste à une fonction qui imprime le nom de chaque magicien
+def show_magicians(names):
+    for i in names:
+        print(i)
+show_magicians(magician_names)
+#Écrivons une fonction appelée make_great()qui modifie la liste des magiciens en ajoutant la phrase "the Great"au nom de chaque magicien.
+def make_great(names):
+    for i in names:
+        print("the great", i)
+make_great(magician_names)
 
