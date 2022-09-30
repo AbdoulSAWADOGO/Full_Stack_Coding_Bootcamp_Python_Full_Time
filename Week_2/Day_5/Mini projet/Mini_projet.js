@@ -26,3 +26,25 @@ function playTheGame(){
 		}
 	}
 }
+
+//deuxième partie
+		function compareNumbers(userNumber,computerNumber) {
+		let i=0;
+		while(i<3) {
+			if (userNumber == computerNumber) {
+				alert("WINNER");
+				return true;
+			} else if (userNumber > computerNumber) {
+				userNumber = prompt("Votre numéro est supérieur à celui de l'ordinateur, donner un autre"); 
+			}
+			else if (userNumber < computerNumber) {
+				userNumber = prompt("Votre numéro est inférieur à celui de l'ordinateur, donner un autre"); 
+			}	
+			else if ( i == 3) {
+				alert("Vous n'avez pas de chances");
+				return;
+			}
+			i++;
+		}
+	}
+	
