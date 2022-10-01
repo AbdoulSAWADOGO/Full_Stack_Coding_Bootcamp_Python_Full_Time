@@ -86,3 +86,70 @@ console.log(liste);
 ajout=document.body.firstElementChild.firstElementChild;
 console.log(ajout);
 ajout.appendChild(liste);
+
+//Exercice 3 terminé
+
+//Exercice 4 : Ma liste de livres
+//Création d'un div vide dans le corps de html
+//Création d'un tableau dans le fichier java script appelé allbooks
+divit = document.createElement('div');
+divit.setAttribute("class", "listBooks");
+console.log(divit);
+document.body.appendChild(divit)
+
+		var book= new Object();
+			
+			book.title=" ";
+			book.author=" "
+			book.image=" ";
+			book.alreadyRead=0;
+			
+		
+		var allBooks=[];
+		console.log(book);
+		console.log(allBooks);
+		var books=[];
+		for(var i=0;i<2;i++){
+			books[i]=new Object;
+			books[i].title=prompt("svp entrer le titre du livre "+(i+1)+"");
+			console.log(books[i].title);
+			books[i].author=prompt("svp, entrer l'auteur du livre "+(i+1)+"");
+			console.log(books[i].author);
+			books[i].image=prompt("svp, entrer l'image du livre "+(i+1)+"");
+			console.log(books[i].title);
+			do{
+			books[i].alreadyRead=prompt("svp, vous êtes prêts à lire un livre "+(i+1)+" ?\nType: 1-Yes\t\t 2-No");
+			books[i].alreadyRead=parseInt(books[i].alreadyRead);
+			console.log(typeof(books[i].alreadyRead)+books[i].alreadyRead);
+			console.log(books[i].alreadyRead);
+			}while(!books[i].alreadyRead ||(books[i].alreadyRead!==2 && books[i].alreadyRead!==1));
+			allBooks[i]=books[i];
+			console.log(allBooks);
+
+		}
+
+		newp=[];
+		newimg=[];
+		newTextNode=[];
+		for (var j=0;j<2;j++){
+			newp[j] = document.createElement('p');
+			console.log(newp[j]);
+			newimg[j] = document.createElement('img');
+			newimg[j].setAttribute("src",allBooks[j].image);
+			newimg[j].setAttribute("width","100px");
+			console.log(newimg[j]);
+			newTextNode[j] = document.createTextNode(" "+allBooks[j].title+" écrit par "+allBooks[j].author+" ");
+			console.log(newTextNode[j]);
+			newp[j].appendChild(newimg[j]);
+			console.log(newp[j]);
+			newp[j].appendChild(newTextNode[j]);
+			console.log(newp[j]);
+			document.body.firstElementChild.nextElementSibling.appendChild(newp[j])
+			if(allBooks[j].alreadyRead===1){
+				newp[j].style.color="red";
+			}
+			
+		}
+//Exercice 4 terminé	
+
+
