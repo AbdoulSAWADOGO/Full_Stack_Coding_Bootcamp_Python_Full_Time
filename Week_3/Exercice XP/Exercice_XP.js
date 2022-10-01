@@ -69,3 +69,20 @@ var Changement5=document.body;
 Changement5.style.fontSize="50px";
 //Exercice 2 terminé
 
+//Exercice 3 : Changer la barre de navigation
+//Ajout du code donné au fichier html
+var Changement6=document.getElementsByTagName("div");
+Changement6.setAttribute("id", "socialNetworkNavigation");
+console.log(Changement6);
+
+//Ajout d'un nouveau <li> au <ul>
+//Creation d'une nouvelle balise, d'un nouveau noeud,ajout du noeud de texte et du noeud de liste
+liste = document.createElement('li');
+console.log(liste);
+noeud = document.createTextNode("Déconnexion");
+console.log(noeud);
+liste.appendChild(noeud);
+console.log(liste);
+ajout=document.body.firstElementChild.firstElementChild;
+console.log(ajout);
+ajout.appendChild(liste);
