@@ -69,3 +69,65 @@ class Song:
 toto_objet= Song(["There’s a lady who's sure","all that glitters is gold", "and she’s buying a stairway to heaven"])
 toto_objet.sing_me_a_song()
 //Exercice 3 terminé
+
+//Exercice 4 : Après-midi au zoo
+//Création d'une claase appelée Zoo, etc
+class Zoo:
+	def __init__(self,nom):
+		self.animals=[]
+		self.nom=nom
+//Créons une méthode appelée add_animalqui prend un paramètre new_animal. Cette méthode ajoute le new_animalà la animalsliste tant qu'il n'est pas déjà dans la liste.
+	def add_animal(self,new_animal):
+		if new_animal not in self.animals:
+			self.animals.append(new_animal)
+		else:
+			print(f"{new_animal} est dans la liste")
+//Créons une méthode appelée get_animalsqui imprime tous les animaux du zoo.
+	def get_animals(self):
+		print('Les animaux du Zoo : ')
+		for i in self.animals:
+			print(i,end=' ')
+//Créons une méthode appelée sell_animalqui prend un paramètre animal_sold. Cette méthode supprime l'animal de la liste et bien sûr l'animal doit exister dans la liste.
+def sell_animal(self,animal_sold):
+		if animal_sold in self.animals:
+			self.animals.remove(animal_sold)
+		print('Les animaux du Zoo : ')
+			for i in self.animals:
+				print(i,end=' ')
+
+//Créez une méthode appelée sort_animalsqui trie les animaux par ordre alphabétique et les regroupe en fonction de leur première lettre.
+def sort_animals(self):
+		sort=sorted(self.animals)
+		dictionnaire={}
+		result=[]
+		x=[]
+		for i in sort:
+			if i[0] not in x:
+				x.append(i[0])
+		for i in x:
+			p=[]
+			for j in sort:
+				if j[0]==i:
+					p.append(j)
+			result.append(p)
+		for k,v in enumerate(result):
+			dictionnaire[k]=v
+		return dictionnaire
+//Créons une méthode appelée get_groupsqui imprime l'animal/les animaux à l'intérieur de chaque groupe.
+	def get_groups(self,dictionnaire):
+		print(' ')
+		print('Les animaux du Zoo par groupe alphabétique  : ')
+		print(dictionnaire)
+
+//Créez un objet appelé ramat_gan_safariet appelez toutes les méthodes.
+
+ramat_gan_safari=Zoo('safari') 
+print(f'Soyez lzs bienvenus au Zoo  {ramat_gan_safari.name}')
+num=int(input('Combien d animaux, comptez vous ajouter dans le zoo : '))
+for i in range(num):
+	add=input('Quel animal, voulez vous ajouter : ')
+	ramat_gan_safari.add_animal(add)
+ramat_gan_safari.get_animals()
+dictionnaire=ramat_gan_safari.sort_animals()
+ramat_gan_safari.get_groups(dictionnaire)
+//Exercice XP terminé
