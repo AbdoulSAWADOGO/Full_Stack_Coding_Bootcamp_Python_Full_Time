@@ -15,12 +15,17 @@ def read(liste,index,*args):
 code=[]
 top = 0
 while top < (len(Matrix[0])):
+    cpt=0
     for line in Matrix :
         char = read(line,top)
-        if char.isalpha():
+        if char.isalpha() and char != " ":
             code.append(char)
-        else:
+            cpt=0
+        elif cpt==0:
+            cpt += 1
+        elif cpt==1:
             code.append(" ")
+            cpt += 1
 
     top +=1
 print("".join(code))
