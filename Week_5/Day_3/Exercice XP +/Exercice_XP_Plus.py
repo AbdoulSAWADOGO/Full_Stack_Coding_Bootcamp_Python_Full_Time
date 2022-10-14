@@ -23,4 +23,9 @@ chaine = "".join([r.choice(string.ascii_letters) for i in range(0,5)])
 
 print(chaine)
 
+# Exercice 4 : Date Actuelle
+#Création d'une fonction qui affiche la date actuelle
+def actu():
+    from datetime import datetime, time
+    print(datetime.now())
 
