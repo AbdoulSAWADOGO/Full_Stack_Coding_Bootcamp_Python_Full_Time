@@ -100,3 +100,18 @@ word4=input("enter word 4 : ")
 word5=input("enter word 5 : ")
 box_printer(word1,word2,word3,word4,word5)
     
+
+
+#Exercice 4
+
+ def insertion_sort(alist):
+    for index in range(1,len(alist)):
+      currentvalue = alist[index]
+      position = index
+      while position>0 and alist[position-1]>currentvalue:
+          alist[position]=alist[position-1]
+          position = position-1
+      alist[position]=currentvalue
+ alist = [54,26,93,17,77,31,44,55,20]
+ insertion_sort(alist)
+ print(alist)
