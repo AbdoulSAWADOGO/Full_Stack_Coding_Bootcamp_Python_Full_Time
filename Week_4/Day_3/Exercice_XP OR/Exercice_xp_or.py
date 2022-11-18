@@ -40,3 +40,22 @@ if t==0:
 	#Si la personne n'est pas dans le dictionnaire impression d'un message
  print("Désolé! nous ne connaissons pas votre date d'anniversaire",name)
 
+#Exercice 3
+birthday={'Abdoul':'1960/12/24',
+           'Steve':'2009/02/05',
+           'Rachid':'1994/03/29',
+           'Kader':'2003/07/16',
+           'Toto':'2001/06/2001'}
+name=input("entrer votre nom ==>")
+birth=input("entrer votre date d'anniversaire yyyy/mm/dd ==>")
+t=0
+#Ajout de nouvelles données dans le dictionnaire
+for cle in birthdays.keys():
+    if name==cle:
+        print(f"{name} is found and The corresponding birthday is found:",birthdays[name])
+        t=1
+        break
+if t==0:
+	print(f"we add {name} to the list with birthday date {birth}")
+	birthdays[name]=birth
+	print(birthdays)
