@@ -70,7 +70,7 @@ h6 {
      padding: 0 0 10px 0;
      font-weight: normal;
      line-height: normal;
-     color: #111111;
+     color: #ffffff;
      margin: 0
 }
 
@@ -600,7 +600,7 @@ ul.btn li:last-child {
 }
 
 .about .about_img {
-     background: url(../images/toto.jpg);
+     background: url(../images/toto.webp);
      background-size: 100% 100%;
      text-align: center;
      min-height: 700px;

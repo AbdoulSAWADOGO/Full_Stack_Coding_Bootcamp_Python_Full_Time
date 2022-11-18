@@ -4,7 +4,6 @@ let chaine = prompt("Svp entrer plusieurs mots et séparez-les par des virgules"
 chaine = chaine.split(",");
 //Affichage des mots dans un cadre rectangulaire
 let affich=0;
-let etoile="*";
 for(let mot of chaine){
     if(affich<mot.length)
     {
@@ -19,8 +18,8 @@ for(let i=0;i<chaine.length;i++)
     {
         console.log("*".padStart((max+4),"*"));
     }
-        console.log("* " +phrase[i].concat("".padStart(((max+4)-2)-(2+phrase[i].length)), " ") +"*");
-    if(i==phrase.length-1)
+        console.log("* " +chaine[i].concat("".padStart(((max+4)-2)-(2+chaine[i].length)), " ") +"*");
+    if(i==chaine.length-1)
     {
         console.log("*".padStart((max+4),"*"));
     }

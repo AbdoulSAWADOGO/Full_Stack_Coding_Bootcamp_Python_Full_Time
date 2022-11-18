@@ -67,6 +67,7 @@ else
 	console.log(users[0], " ", users[1] , "et", users.length-2, " autres utilisateurs de plus sont en ligne");}
 //c'est un peu compliqué cet exercice là car je m'étais plongé dans la programmation des sockets avec des fonctions sockets bizarres
 //j'avais pensé au protocole de communication client serveur
+//j'ai demandé de l'aide dans le groupe et j'ai eu une explication
 
 
 

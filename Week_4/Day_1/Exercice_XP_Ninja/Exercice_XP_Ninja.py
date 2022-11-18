@@ -35,10 +35,13 @@ print(taille)
 #Exercice 5 : Mot Le Plus Long Sans Caractère Spécifique
 chaine=input("entrer une phrase svp==>")
 chaine1=chaine
-while('A' in chaine):
+while('i' in chaine):
     chaine=input("entrer à nouveau une phrase svp==>")
 if (len(chaine) > len(chaine1)):
     print("Toutes mes félicitations ")
+
+
+    
 
 
     

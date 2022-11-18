@@ -3,7 +3,7 @@
   {% load static %}
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/style_conn.css' %}">
     <title>Loging Page</title>
   </head>
@@ -11,11 +11,14 @@
   <body>
     <section>
         <div class="titi">
-          <h2>Log In</h2>
+          <h2>CONNEXION</h2>
           <div class="entete">
-              <input class="input" type="text" name="e-mail" value="email...">
-              <input class="input" type="text" name="password" value="password...">
-              <button type="submit">LOG IN</button>
+            <form method="post" action="{% url 'connexion' %}">
+              {% csrf_token %}
+              <input class="input" type="text" name="username" placeholder="Entrer le nom d'utilisateur...">
+              <input class="input" type="text" name="password" placeholder="Entrer le mot de passe...">
+              <button type="submit">Connectez-vous</button>
+            </form>
                 <label>
                 </label>
           </div>
@@ -30,17 +33,17 @@
                 <i class="fa-brands fa-github"></i>
                 <i class="fa-brands fa-linkedin"></i>
               </div>
-              <footer><b>2022</b></footer>
+              <footer><b>Abdoul Kader SAWADOGO</b></footer>
           </div>
 
-        <div class="part">
-          <i class="fa-solid fa-user-plus"></i>
-          <h1>Hello Friend!</h1>
-          <p id="lili">Enter your personnal details and start journey whith us</p>
-        <a class="regis" href="submit">
-          <button>REGISTER<i class="fa fa-circle-arrow-right"></i></button>
-        </a>
-        </div>
+        {% comment %} <div class="part"> {% endcomment %}
+          {% comment %} <i class="fa-solid fa-user-plus"></i> {% endcomment %}
+          {% comment %} <h1>Hello Friend!</h1> {% endcomment %}
+          {% comment %} <p id="lili">Enter your personnal details and start journey whith us</p> {% endcomment %}
+        {% comment %} <a class="regis" href="submit"> {% endcomment %}
+          {% comment %} <button>REGISTER<i class="fa fa-circle-arrow-right"></i></button> {% endcomment %}
+        {% comment %} </a> {% endcomment %}
+        {% comment %} </div> {% endcomment %}
     </section>
   
 

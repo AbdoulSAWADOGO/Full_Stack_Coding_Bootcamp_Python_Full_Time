@@ -118,12 +118,15 @@ for(let i of shoppingList)
 				//Dimunition du stock de 1 le bonus
 				stock[i]=stock[i] - 1;
 				console.log("le prix est ", prices[i]);
+				prix += prices[i];
 			} 
 			else 
 			{
 				console.log("L'article ", i ,"n'est pas en stock");
 			}
 	}
+	console.log("le prix total de vos articles est==> ", prix);
+
 }
 myBill();
 

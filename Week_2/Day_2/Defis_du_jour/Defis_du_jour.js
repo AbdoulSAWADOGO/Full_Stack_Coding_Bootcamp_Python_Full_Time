@@ -12,7 +12,7 @@ let wordBad = sentence.indexOf("bad");
 if (wordNot < wordBad)
 {
 	// reg = /not|bad/ig;
-	sentence = sentence.replace(sentence.substring(wordNot,wordBad+3), "good");	sentence = sentence.replace(/bad/ig, "");
+	sentence = sentence.replace(sentence.substring(wordNot,wordBad+3), "good");	//sentence = sentence.replace(/bad/ig, "");
 	console.log(sentence);
 }
 else {
