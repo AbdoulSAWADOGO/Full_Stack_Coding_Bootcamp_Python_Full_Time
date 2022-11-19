@@ -38,3 +38,5 @@ class MyList:
 list=MyList(['orange','mangoes','tomatoes','potatoes','name','cool','yeh'])
 print(f'La liste inversée==>{list.reverseList()}')
 print(f'La liste triée==>{list.sortList()}')
+
+
