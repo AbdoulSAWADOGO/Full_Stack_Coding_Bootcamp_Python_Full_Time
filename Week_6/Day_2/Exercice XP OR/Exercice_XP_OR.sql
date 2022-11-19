@@ -43,3 +43,45 @@ SELECT COUNT(*) FROM students WHERE math_grade>83;
 INSERT INTO students VALUES(6,'Omer', 'Simpson', (SELECT birth_date FROM students WHERE last_name='Simpson' AND first_name='Omer'),70);
 -- Trouver la somme de toutes les notes des élèves.
 SELECT SUM(math_grade) as SumNote FROM students;
+
+
+-- Exercice 3 : Articles et clients
+
+--Create a table named purchases. It should have 3 columns 
+CREATE TABLE purchases (
+ 	purchases_id SERIAL PRIMARY KEY NOT NULL,
+	customer_id INTEGER NOT NULL,
+	items_id INTEGER NOT NULL,
+	quantity_purchased INTEGER NOT NULL,
+	FOREIGN KEY(customer_id) REFERENCES customers(id_customers),
+	FOREIGN KEY(items_id) REFERENCES items(id_items)
+);
+
+-- Insérez les achats pour les clients, utilisez des sous-requêtes :
+-- Scott Scott a acheté un ventilateur
+INSERT INTO purchases(customer_id,items_id,quantity_purchased) VALUES((SELECT id_customers FROM customers WHERE last_name='Scott' AND first_name='Scott'),(SELECT id_items FROM items WHERE libelle='fan' ),1);
+-- Melanie Johnson a acheté dix grands bureaux
+INSERT INTO purchases(customer_id,items_id,quantity_purchased) VALUES((SELECT id_customers FROM customers WHERE last_name='Johnson' AND first_name='Melanie'),(SELECT id_items FROM items WHERE libelle='large desk' ),10);
+-- Greg Jones a acheté deux petits bureaux
+INSERT INTO purchases(customer_id,items_id,quantity_purchased) VALUES((SELECT id_customers FROM customers WHERE last_name='Jones' AND first_name='Greg'),(SELECT id_items FROM items WHERE libelle='small desk' ),2);
+
+-- Utilisez SQL pour obtenir les éléments suivants à partir de la base de données :
+-- Tous les achats. Ces informations nous sont-elles utiles ?
+SELECT * FROM purchases;
+-- Tous les achats, joint à la table des clients .
+SELECT * FROM purchases pu INNER JOIN customers cu ON pu.customer_id=cu.id_customers;
+-- Achats du client avec l'ID égal à 5.
+SELECT * FROM purchases WHERE customer_id=5;
+-- Achats pour un grand bureau ET un petit bureau
+SELECT * FROM purchases pu INNER JOIN items i ON pu.items_id=i.id_items  WHERE i.libelle IN ('large desk','small desk');
+
+
+-- Utilisez SQL pour afficher tous les clients qui ont effectué un achat. Afficher les champs/colonnes suivants :
+-- Prénom du client
+-- Nom de famille du client
+-- Nom de l'article
+SELECT cu.first_name,cu.last_name, i.libelle FROM customers cu INNER JOIN purchases pu ON cu.id_customers=pu.customer_id  INNER JOIN items i ON pu.items_id=i.id_items;
+
+-- Ajoutez une ligne qui référence un client par ID, mais ne référence pas un article par ID (laissez-la vide). Est-ce que ça marche? Pourquoi pourquoi pas?
+INSERT INTO purchases(customer_id,quantity_purchased) VALUES((SELECT id_customers FROM customers WHERE last_name='Jones' AND first_name='Sandra'),2);
+-- ça ne marche pas parce que item_id est défini à not null
