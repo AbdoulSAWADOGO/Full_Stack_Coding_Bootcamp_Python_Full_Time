@@ -1,44 +1,10 @@
--- Exercice 1 : Articles et clients
--- Nous travaillons sur la base de données public
--- Utilisons sql pour obtenir les éléments suivants à partir de la base de données
--- Tous les articles, classés par prix (du plus bas au plus élevé).
-SELECT * FROM items ORDER BY price ASC; 
--- Les articles dont le prix est supérieur à 80 (80 inclus), classés par prix (du plus élevé au plus bas).
-SELECT * FROM items WHERE price >=80 ORDER BY price DESC; 
---Les 3 premiers clients par ordre alphabétique du prénom (AZ) – exclure la colonne clé primaire des résultats.
-SELECT first_name,last_name FROM customers  ORDER BY first_name ASC LIMIT 3; 
---Tous les noms de famille (pas d'autres colonnes !), dans l'ordre alphabétique inverse (ZA)
-SELECT last_name FROM customers  ORDER BY last_name DESC; 
-
-
---Exercice 2 : Base de données Dvdrental
---Installation d'un nouvel exemple de base de données
-
--- Dans la base de données dvdrental, écrivez une requête pour sélectionner toutes les colonnes de la table « client ».
-SELECT * FROM customer;
--- Écrivez une requête pour afficher les noms ( first_name , last_name ) en utilisant un alias nommé « full_name ».
-SELECT (first_name, last_name) as full_name FROM customer;
--- Permet d'obtenir toutes les dates auxquelles les comptes ont été créés. Écrivez une requête pour sélectionner tous les create_date de la table « client » (il ne doit pas y avoir de doublons).
-SELECT DISTINCT create_date FROM customer;
--- Écrivez une requête pour obtenir tous les détails du client à partir de la table des clients, elle doit être affichée dans l'ordre décroissant de leur prénom.
-SELECT * FROM customer ORDER BY first_name DESC;
--- Rédigez une requête pour obtenir l'ID du film, le titre, la description, l'année de sortie et le tarif de location par ordre croissant en fonction de leur tarif de location.
-SELECT film_id,title,description,release_year,rental_rate FROM film ORDER BY rental_rate ASC;
--- Écrivez une requête pour obtenir l'adresse et le numéro de téléphone de tous les clients vivant dans le district du Texas, ces détails peuvent être trouvés dans le tableau "adresse".
-SELECT address,phone FROM address WHERE district='Texas';
--- Écrivez une requête pour récupérer tous les détails du film où l'identifiant du film est 15 ou 150.
-SELECT * FROM film WHERE film_id IN (15,150) ;
--- Écrivez une requête qui devrait vérifier si votre film préféré existe dans la base de données. Demandez à votre requête d'obtenir l'ID du film, le titre, la description, la durée et le tarif de location, ces détails peuvent être trouvés dans le tableau "film".
-SELECT film_id,title,description,film.length,rental_rate FROM film WHERE title='African Egg';
--- Pas de chance de trouver votre film ? Peut-être avez-vous fait une erreur dans l'orthographe du nom. Écrivez une requête pour obtenir l'ID du film, le titre, la description, la durée et le tarif de location de tous les films commençant par les deux premières lettres de votre film préféré.
-SELECT film_id,title,description,film.length,rental_rate FROM film WHERE title ILIKE 'Af%';
--- Écrivez une requête qui trouvera les 10 films les moins chers.
-SELECT  film_id,title,description,film.length,rental_rate FROM film ORDER BY rental_rate ASC LIMIT 10;
--- Pas satisfait des résultats. Écrivez une requête qui trouvera les 10 prochains films les moins chers.
-SELECT  film_id,title,description,film.length,rental_rate FROM film  ORDER BY rental_rate ASC  OFFSET 10 FETCH FIRST 10 ROWS ONLY;
--- Écrivez une requête qui joindra les données de la table des clients et de la table des paiements. Vous souhaitez obtenir le montant et la date de chaque paiement effectué par un client, classé par son identifiant (de 1 à…).
-SELECT pa.amount, pa.payment_date FROM payment pa INNER JOIN customer cu ON pa.customer_id=cu.customer_id ORDER BY cu.customer_id ASC;
--- Vous devez vérifier votre inventaire. Écrivez une requête pour obtenir tous les films qui ne sont pas dans l'inventaire.
-SELECT f.film_id,f.title,f.description,f.length,f.rental_rate FROM film f WHERE f.film_id NOT IN (SELECT film_id FROM inventory);
--- Rédigez une requête pour trouver quelle ville se trouve dans quel pays.
-SELECT co.country, ci.city FROM country co INNER JOIN city ci ON ci.country_id=co.country_id;
+-- Récupérez les 2 derniers clients par ordre alphabétique (AZ) - excluez 'id' des résultats.
+SELECT first_name,last_name,id_customers FROM (SELECT first_name,last_name,id_customers FROM customers ORDER BY id_customers DESC LIMIT 2 ) tmp ORDER BY id_customers ASC ; 
+-- Utilisez SQL pour supprimer tous les achats effectués par Scott.
+DELETE FROM purchases pu WHERE pu.customer_id= (SELECT id_customers FROM customers WHERE last_name='Scott'); 
+-- Scott existe-t-il toujours dans la table des clients, même s'il a été supprimé ? Essayez de le trouver.
+SELECT * FROM customers WHERE last_name='Scott'; 
+-- Utilisez SQL pour trouver tous les achats. Joignez les achats à la table des clients , de sorte que la commande de Scott apparaisse, bien qu'au lieu du prénom et du nom du client, vous ne devriez voir que vide/vide. (Quel type de jointure devez-vous utiliser ?).
+SELECT * FROM customers cu LEFT OUTER JOIN purchases pu ON pu.customer_id=cu.id_customers; 
+-- Utilisez SQL pour trouver tous les achats. Joignez les achats à la table des clients , afin que la commande de Scott n'apparaisse PAS. (Quel type de jointure devez-vous utiliser ?)
+ SELECT * FROM customers cu RIGHT OUTER JOIN purchases pu ON pu.customer_id=cu.id_customers;
