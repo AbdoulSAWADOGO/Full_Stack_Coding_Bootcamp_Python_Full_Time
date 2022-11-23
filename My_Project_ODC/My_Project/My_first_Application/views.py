@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login
 from multiprocessing.spawn import is_forking
 # from django.shortcuts import render
 from django.http import  HttpResponseRedirect,  HttpResponse
-from My_first_Application.models import citoyen, alerte
+from My_first_Application.models import  alerte, UserCitoyen
 
 
 
@@ -29,7 +29,8 @@ def onea(request):
                 structure = "ONEA",
                 type_de_probleme = request.POST['type_alerte'],
                 niveau_du_probleme = request.POST['niveau_problème'],
-                commentaire_sur_le_probleme = request.POST['commentaire']
+                commentaire_sur_le_probleme = request.POST['commentaire'],
+                profil = request.FILES['photo']
             )
             message = "Alerte créée avec succès"
         else :
@@ -55,7 +56,8 @@ def sonabel(request):
                 structure = "SONABEL",
                 type_de_probleme = request.POST['type_alerte'],
                 niveau_du_probleme = request.POST['niveau_problème'],
-                commentaire_sur_le_probleme = request.POST['commentaire']
+                commentaire_sur_le_probleme = request.POST['commentaire'],
+                profil = request.FILES['photo']
             )
             message = "Alerte créée avec succès"
         else :
@@ -81,7 +83,9 @@ def pompier(request):
                 structure = "POMPIERS",
                 type_de_probleme = request.POST['type_alerte'],
                 niveau_du_probleme = request.POST['niveau_problème'],
-                commentaire_sur_le_probleme = request.POST['commentaire']
+                commentaire_sur_le_probleme = request.POST['commentaire'],
+                profil = request.FILES['photo']
+
             )
             message = "Alerte créée avec succès"
         else :
@@ -107,7 +111,8 @@ def autres(request):
                 structure = "AUTRES",
                 type_de_probleme = request.POST['type_alerte'],
                 niveau_du_probleme = request.POST['niveau_problème'],
-                commentaire_sur_le_probleme = request.POST['commentaire']
+                commentaire_sur_le_probleme = request.POST['commentaire'],
+                profil = request.FILES['photo']
             )
             message = "Alerte créée avec succès"
         else :
@@ -151,7 +156,7 @@ def account(request):
     if request.method == "POST":
         if "genre" not in request.POST:
             error["genre"]="genre non remplit"
-        if "firs_name" not in request.POST:
+        if "first_name" not in request.POST:
             error["firs_name"]="nom non remplit"
         if "last_name" not in request.POST:
             error["last_name"]="prénom non remplit"
@@ -163,21 +168,25 @@ def account(request):
             error["telephone"]="telephone non remplit"
         if "cnib" not in request.POST:
             error["cnib"]="cnib non remplit"
-            print(error)
+        print(error)
         if len(error) == 0:
-            citoyen.objects.create_user(
-                genre = request.GET['genre'],
+            user = UserCitoyen.objects.create_user(
+                genre = request.POST['genre'],
                 first_name = request.POST['first_name'],
                 last_name = request.POST['last_name'],
-                user_name = request.POST['user_name'],
+                username = request.POST['user_name'],
                 email = request.POST['email'],
                 telephone = request.POST['telephone'],
                 cnib = request.POST['cnib']
             )
-            message = "Alerte créée avec succès"
+            user.set_password(request.POST['Password'])
+            user.save()
+            # message = "user créé avec succès"
+            return redirect('connexion')
         else :
             message = "Ohhhh! une erreur s'est produite"  
     context = {
         'message' : message,
+        'error' : error,
     }  
     return render(request, 'Dossiers/account.html', context)
